@@ -3,6 +3,7 @@
 <head>
   <title>PuzzWager - Home</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script src="js/telegram.js"></script>
   <script src="js/web3.js"></script>
   <script src="js/app.js" defer></script>
@@ -13,5 +14,12 @@
   <button onclick="connectWallet()">Connect Wallet</button>
   <div id="challenges"></div>
   <a href="create.html">Create Challenge</a> | <a href="profile.html">Profile</a>
+  
+   <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand();  // Expands the app to full screen
+
+        console.log("Telegram WebApp Loaded:", tg);
+    </script>
 </body>
 </html>
