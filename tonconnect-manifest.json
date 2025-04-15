@@ -1,0 +1,7 @@
+{
+  "url": "https://yourdomain.com",
+  "name": "PuzzWager",
+  "iconUrl": "https://yourdomain.com/logo.png",
+  "network": "testnet",
+  "permissions": ["ton_addr", "ton_proof"]
+}
