@@ -27,6 +27,22 @@
 
   <!-- SDKs and Your Scripts -->
 <script>
+  let tg = window.Telegram.WebApp;
+  tg.expand();
+
+  if (!tg.initDataUnsafe || !tg.initDataUnsafe.user) {
+    // Not accessed through Telegram
+    window.location.href = "https://t.me/PuzzWager_bot"; // Force redirect to Telegram
+  } else {
+    const user = tg.initDataUnsafe.user;
+    console.log("Authenticated Telegram User:", user);
+
+    // Display user info
+    if (user) {
+        document.body.innerHTML += `<p>Welcome, ${user.first_name}!</p>`;
+  }
+  </script>
+<script>
         let tg = window.Telegram.WebApp;
         tg.expand();  // Expands the app to full screen
 
